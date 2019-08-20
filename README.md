@@ -14,7 +14,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
   * will be recent, e.g. *tty.SLAB_USBtoUART* (mac) or */dev/ttyUSB0* (linux)
   * make sure it is writable, if necessary:
-  > sudo chmod a+rw /dev/ttyUSB0
+    > sudo chmod a+rw /dev/ttyUSB0
 
 * Windows: Probably com port 3
 
@@ -27,12 +27,12 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
 **Upload new firmware**
 * Download latest stable *.bin* file from [here](http://micropython.org/download#esp8266), **NB** use correct module type, e.g. 8266, 32
-> esptool.py  --port PATH_TO_MODULE --baud 460800 write_flash --flash_size=detect 0 PATH_TO_BIN_FILE
+  > esptool.py  --port PATH_TO_MODULE --baud 460800 write_flash --flash_size=detect 0 PATH_TO_BIN_FILE
 
 **Install commandline interface**
 * Mac/Linux: picocom
-> sudo yum install picocom
-> picocom PATH_TO_MODULE -b115200
+  > sudo yum install picocom
+  > picocom PATH_TO_MODULE -b115200
 
 * Windows: TeraTerm: https://tera-term.en.lo4d.com/windows
 	* Open and choose serial port (e.g. COM3)
