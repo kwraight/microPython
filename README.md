@@ -11,6 +11,9 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
 # ESP tricks
 
+* [General Recipe](#general-recipe-to-use-ESP-module)
+* [Server Example](#server-example)
+
 ## General recipe to use ESP module
 
 **Connect module via USB and check for connection**
@@ -55,7 +58,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
   * Windows: add delay time (0.1 above) may need some playing with (0.1…0.5)
 
-## Server
+## Server Example
 
 **Upload boot files**
 Upload file to connect to WiFi
