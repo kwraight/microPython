@@ -2,6 +2,10 @@
 
 A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
+**Useful links**
+* [tutorial](http://docs.micropython.org/en/v1.9.4/esp8266/esp8266/tutorial/intro.html)
+* [basic “operating system” services](https://docs.micropython.org/en/latest/library/uos.html)
+
 ---
 
 # ESP tricks
