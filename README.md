@@ -5,6 +5,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 **Useful links**
 * [tutorial](http://docs.micropython.org/en/v1.9.4/esp8266/esp8266/tutorial/intro.html)
 * [basic “operating system” services](https://docs.micropython.org/en/latest/library/uos.html)
+* [online uploader](http://micropython.org/webrepl/)
 
 ---
 
@@ -60,8 +61,16 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 Upload file to connect to WiFi
 > ampy --port PATH_TO_MODULE put connect.py boot.py
 
-Upload file with webpage
+**Upload file with webpage**
 > ampy --port PATH_TO_MODULE put server.py main.py
+
+**Monitor for IP and debugging**
+* Connect to device via picocom
+* Reset device (press "EN" button)
+* Get module IP from terminal output
+  > E.g. ('192.168.1.223', '255.255.255.0', '192.168.1.254', '192.168.1.254')
+
+  * 192.168.1.223 is the IP here
 
 ---
 
