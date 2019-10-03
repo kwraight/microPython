@@ -7,6 +7,7 @@ except:
 
 from machine import Pin
 import network
+import myDetails
 
 import esp
 esp.osdebug(None)
@@ -14,7 +15,8 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-ssid = 'Tron'
+myWifi = myDetails.SetWorkWifi()
+ssid = myWifi.ssid
 password = ''
 
 station = network.WLAN(network.STA_IF)

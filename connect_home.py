@@ -7,6 +7,7 @@ except:
 
 from machine import Pin
 import network
+import myDetails
 
 import esp
 esp.osdebug(None)
@@ -14,8 +15,9 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-ssid = 'BCCW-Towers'
-password = 'LiverpoolGin1982*'
+myWifi = myDetails.SetHomekWifi()
+ssid = myWifi.ssid
+password = myWifi.pwd
 
 station = network.WLAN(network.STA_IF)
 
@@ -29,4 +31,3 @@ print('Connection successful')
 print(station.ifconfig())
 
 led = Pin(2, Pin.OUT)
-
