@@ -17,7 +17,7 @@ gc.collect()
 
 myWifi = myDetails.SetWorkWifi()
 ssid = myWifi.ssid
-password = ''
+password = myWifi.pwd
 
 station = network.WLAN(network.STA_IF)
 
