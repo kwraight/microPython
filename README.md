@@ -40,6 +40,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 **Install commandline interface**
 * Mac/Linux: picocom
   > sudo yum install picocom
+  
   > picocom PATH_TO_MODULE -b115200
 
 * Windows: TeraTerm: https://tera-term.en.lo4d.com/windows
