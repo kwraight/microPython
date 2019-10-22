@@ -78,18 +78,21 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 # Server Examples
 
 ## General Format
-
 **Upload boot files**
 Upload file to connect to WiFi
 > ampy --port PATH_TO_MODULE put connect.py boot.py
 
 **Upload file with webpage**
+Upload file with webpage layout and functions
 > ampy --port PATH_TO_MODULE put server.py main.py
 
+**Upload any additional files required**
+> ampy --port PATH_TO_MODULE put other.py other.py
+
 **Monitor for IP and debugging**
-* Connect to device via picocom
-* Reset device (press "EN" button)
-* Get module IP from terminal output
+1. Connect to device via picocom
+2. Reset device (press "EN" button)
+3. Get module IP from terminal output
   > E.g. ('192.168.1.223', '255.255.255.0', '192.168.1.254', '192.168.1.254')
 
   * 192.168.1.223 is the IP here
@@ -100,14 +103,17 @@ Two button webpage for toggling green and red LEDs independently
 * LEDs connected to ESP GPIO pins 5 (D1) & 4 (D2)
 
 **Upload boot files**
+
 Upload file to connect to WiFi, e.g.:
 > ampy --port PATH_TO_MODULE put connect_GreenRed.py boot.py
 
 **Upload credentials**
+
 Upload file to get WiFi credentials required by connect file, e.g.:
 > ampy --port PATH_TO_MODULE put myDetails.py myDetails.py
 
 **Upload file with webpage**
+
 Upload file with webpage layout and functions, e.g.:
 > ampy --port PATH_TO_MODULE put server_GreenRed.py main.py
 
