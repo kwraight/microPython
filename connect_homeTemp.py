@@ -15,7 +15,7 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-myWifi = myDetails.SetHomekWifi()
+myWifi = myDetails.SetHomeWifi()
 ssid = myWifi.ssid
 password = myWifi.pwd
 
@@ -31,7 +31,6 @@ print('Connection successful')
 print(station.ifconfig())
 
 led = Pin(2, Pin.OUT)
-
-'''
-some pins connected to sensors
-'''
+led.value(0)
+green = Pin(5, Pin.OUT)
+red = Pin(4, Pin.OUT)
