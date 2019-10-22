@@ -7,6 +7,17 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 * [basic “operating system” services](https://docs.micropython.org/en/latest/library/uos.html)
 * [online uploader](http://micropython.org/webrepl/)
 
+## Quick recipe
+1. upload boot.py file (and any supporting files for import)
+> /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/ampy --port /dev/tty.SLAB_USBtoUART put repositories/microPython/connect_homeTemp.py boot.py
+
+2. upload main.py file (and any supporting files for import)
+> /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/ampy --port /dev/tty.SLAB_USBtoUART put repositories/microPython/server_homeTemp.py main.py
+
+3. monitor with picocom
+> picocom /dev/tty.SLAB_USBtoUART -b115200
+* reset (bootoin or commande) ESP once connected
+
 ---
 
 # ESP tricks
@@ -40,7 +51,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 **Install commandline interface**
 * Mac/Linux: picocom
   > sudo yum install picocom
-  
+
   > picocom PATH_TO_MODULE -b115200
 
 * Windows: TeraTerm: https://tera-term.en.lo4d.com/windows
@@ -77,5 +88,20 @@ Upload file to connect to WiFi
   * 192.168.1.223 is the IP here
 
 ---
+
+## Green and Red LED TOGGLED
+Two button webpage for toggling green and red LEDs independently
+* LEDs connected to ESP GPIO pins 5 (D1) & 4 (D2)
+
+**Upload boot files**
+Upload file to connect to WiFi
+> ampy --port PATH_TO_MODULE put connect_GreenRed.py boot.py
+
+**Upload Credentials**
+Upload file to get WiFi credentials required by connect file
+> ampy --port PATH_TO_MODULE put myDetails.py myDetails.py
+
+**Upload file with webpage**
+> ampy --port PATH_TO_MODULE put server_GreenRed.py main.py
 
 # Arduino tricks
