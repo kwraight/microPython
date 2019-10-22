@@ -89,19 +89,33 @@ Upload file to connect to WiFi
 
 ---
 
-## Green and Red LED TOGGLED
+## Green and Red LED Toggler
 Two button webpage for toggling green and red LEDs independently
 * LEDs connected to ESP GPIO pins 5 (D1) & 4 (D2)
 
 **Upload boot files**
-Upload file to connect to WiFi
+Upload file to connect to WiFi, e.g.:
 > ampy --port PATH_TO_MODULE put connect_GreenRed.py boot.py
 
-**Upload Credentials**
-Upload file to get WiFi credentials required by connect file
+**Upload credentials**
+Upload file to get WiFi credentials required by connect file, e.g.:
 > ampy --port PATH_TO_MODULE put myDetails.py myDetails.py
 
 **Upload file with webpage**
+Upload file with webpage layout and functions, e.g.:
 > ampy --port PATH_TO_MODULE put server_GreenRed.py main.py
+
+## Popularity Poll
+Webpage for counting clicks:
+
+* bootfile
+> ampy --port PATH_TO_MODULE put connect_work.py boot.py
+
+* credentials
+> ampy --port PATH_TO_MODULE put myDetails.py myDetails.py
+
+* webpage
+> ampy --port PATH_TO_MODULE put server_work.py main.py
+
 
 # Arduino tricks
