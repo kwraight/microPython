@@ -48,7 +48,7 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 * Download latest stable *.bin* file from [here](http://micropython.org/download#esp8266), **NB** use correct module type, e.g. 8266, 32
   > esptool.py  --port PATH_TO_MODULE --baud 460800 write_flash --flash_size=detect 0 PATH_TO_BIN_FILE
 
-  * esp32 requires some extra flags (see [page](http://micropython.org/download#esp32)): 
+  * esp32 requires some extra flags (see [page](http://micropython.org/download#esp32)):
   > esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 PATH_TO_BIN_FILE
 
 **Install commandline interface**
@@ -73,7 +73,11 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 
   * Windows: add delay time (0.1 above) may need some playing with (0.1…0.5)
 
-## Server Example
+---
+
+# Server Examples
+
+## General Format
 
 **Upload boot files**
 Upload file to connect to WiFi
@@ -90,7 +94,6 @@ Upload file to connect to WiFi
 
   * 192.168.1.223 is the IP here
 
----
 
 ## Green and Red LED Toggler
 Two button webpage for toggling green and red LEDs independently
@@ -108,6 +111,7 @@ Upload file to get WiFi credentials required by connect file, e.g.:
 Upload file with webpage layout and functions, e.g.:
 > ampy --port PATH_TO_MODULE put server_GreenRed.py main.py
 
+
 ## Popularity Poll
 Webpage for counting clicks:
 
@@ -120,5 +124,6 @@ Webpage for counting clicks:
 * webpage
 > ampy --port PATH_TO_MODULE put server_work.py main.py
 
+---
 
 # Arduino tricks
