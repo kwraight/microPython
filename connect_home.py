@@ -15,7 +15,7 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-myWifi = myDetails.SetHomekWifi()
+myWifi = myDetails.SetHomeWifi()
 ssid = myWifi.ssid
 password = myWifi.pwd
 
