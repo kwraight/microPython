@@ -48,6 +48,9 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 * Download latest stable *.bin* file from [here](http://micropython.org/download#esp8266), **NB** use correct module type, e.g. 8266, 32
   > esptool.py  --port PATH_TO_MODULE --baud 460800 write_flash --flash_size=detect 0 PATH_TO_BIN_FILE
 
+  * esp32 requires some extra flags (see [page](http://micropython.org/download#esp32)): 
+  > esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 PATH_TO_BIN_FILE
+
 **Install commandline interface**
 * Mac/Linux: picocom
   > sudo yum install picocom
