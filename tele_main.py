@@ -2,7 +2,7 @@
 import gc
 from machine import UART
 
-import tele_api
+import tele_api as api
 #from qr204 import QR204
 
 #printer = QR204(UART(1, 9600))
