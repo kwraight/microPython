@@ -7,9 +7,9 @@ import myBots
 #from qr204 import QR204
 
 #printer = QR204(UART(1, 9600))
-myBot= myBots.SetPpeFriend()
+myBot= myBots.SetTestTron()
 
-telegram = api.TelegramBot(myBot.botAC)
+telegram = api.TelegramBot(myBot.ac)
 
 def message_handler(message):
     if message[2] == '/start':
