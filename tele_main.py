@@ -3,10 +3,13 @@ import gc
 from machine import UART
 
 import tele_api as api
+import myBots
 #from qr204 import QR204
 
 #printer = QR204(UART(1, 9600))
-telegram = api.TelegramBot('864061061:AAFwX5mw6doX0IRFpbmvAyvRaye8zpjbv-U')
+myBot= myBots.SetPpeFriend()
+
+telegram = api.TelegramBot(myBot.botAC)
 
 def message_handler(message):
     if message[2] == '/start':
