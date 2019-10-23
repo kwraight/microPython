@@ -71,6 +71,9 @@ A Playground for [Arduino](#arduino-tricks) and [ESP](#esp-tricks) code
 * upload code
   > ampy --port PATH_TO_MODULE put sourceName.py destinationName.py
 
+  * in case the copy fails (e.g. in case LoLin 8266 modules) try adding 1 second delay: "ampy.pyboard.PyboardError: could not enter raw repl"
+    > ampy --port PATH_TO_MODULE -d1 put sourceName.py destinationName.py
+
   * Windows: add delay time (0.1 above) may need some playing with (0.1…0.5)
 
 ---
