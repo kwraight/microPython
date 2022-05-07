@@ -13,7 +13,7 @@ telegram = api.TelegramBot(myBot.ac)
 
 def message_handler(message):
     if message[2] == '/start':
-        telegram.send(-297635338, 'Send me Message')
+        telegram.send(myBot.gid, 'Send me Message')
     else:
         '''
         printer.uline_enbl()
@@ -27,7 +27,7 @@ def message_handler(message):
         printer.write('_ ' * 16)
         printer.newline()
         '''
-        telegram.send(-297635338, 'Message printed: ')
+        telegram.send(myBot.gid, 'Message printed: ')
     gc.collect()
 
 telegram.listen(message_handler)
